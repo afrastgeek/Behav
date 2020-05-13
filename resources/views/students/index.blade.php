@@ -12,14 +12,20 @@
                             <th class="border-top-0" scope="col">No.</th>
                             <th class="border-top-0" scope="col">Student ID Number</th>
                             <th class="border-top-0" scope="col">Name</th>
+                            <th class="border-top-0"></th>
                         </tr>
                     </thead>
                     <tbody>
                         @forelse ($students as $student)
-                            <tr>
+                            <tr style="transform: rotate(0);">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $student->student_id_number }}</td>
                                 <td scope="row">{{ $student->name }}</td>
+                                <td>
+                                    <a href="{{ route('students.show', $student->id) }}" class="stretched-link">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </td>
                             </tr>
                         @empty
                             <tr>
