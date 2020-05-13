@@ -19,6 +19,15 @@
                     </table>
                 </div>
                 <div class="card-footer text-right">
+                    <a
+                        tabindex="-1"
+                        href="{{ route('students.destroy', $student->id) }}"
+                        data-method="delete"
+                        data-token="{{ csrf_token() }}"
+                        data-confirm="Are you sure you want to delete this student?"
+                        class="text-danger mr-3">
+                        Delete Student
+                    </a>
                     <a href="{{ route('students.edit', $student->id) }}" class="btn btn-primary" role="button">Edit Student</a>
                 </div>
             </div>
