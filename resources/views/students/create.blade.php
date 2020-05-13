@@ -5,6 +5,13 @@
     <div class="row">
         <div class="col">
             <h1 class="mb-4">Students</h1>
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger" role="alert">
+                        {{ $error }}
+                    </div>
+                @endforeach
+            @endif
             <div class="card border-0 shadow-sm">
                 <form action="{{ route('students.store') }}" method="post">
                     @csrf
