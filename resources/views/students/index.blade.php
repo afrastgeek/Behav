@@ -15,11 +15,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
+                        @forelse ($students as $student)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $student->student_id_number }}</td>
+                                <td scope="row">{{ $student->name }}</td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="3" class="text-center" scope="row">No data available.</td>
+                            </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>
