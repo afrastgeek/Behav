@@ -76,6 +76,16 @@
             @auth
                 <div class="container">
                     <div class="row">
+                        <div class="col-md-2">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <h6 class="text-muted">Menu</h6>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('students.index') }}"><i class="fas fa-users"></i> Student</a>
+                                </li>
+                            </ul>
+                        </div>
                         @yield('content')
                     </div>
                 </div>
