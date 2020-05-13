@@ -78,7 +78,9 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        $student->fill($request->all())->save();
+
+        return redirect('students');
     }
 
     /**
