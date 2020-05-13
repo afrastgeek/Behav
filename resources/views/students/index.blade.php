@@ -5,6 +5,9 @@
     <div class="row">
         <div class="col">
             <h1 class="mb-4">Students</h1>
+            <div class="mb-4">
+                <a href="{{ route('students.create') }}" class="btn btn-primary" role="button">Create Student</a>
+            </div>
             <div class="card border-0 shadow-sm">
                 <table class="table table-hover mb-0">
                     <thead>
