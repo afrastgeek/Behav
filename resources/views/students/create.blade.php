@@ -6,7 +6,8 @@
         <div class="col">
             <h1 class="mb-4">Students</h1>
             <div class="card border-0 shadow-sm">
-                <form>
+                <form action="{{ route('students.store') }}" method="post">
+                    @csrf
                     <div class="card-body">
                             <div class="form-group">
                                 <label for="inputStudentIdNumber">Student ID Number</label>
