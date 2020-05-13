@@ -18,6 +18,9 @@
                         </tr>
                     </table>
                 </div>
+                <div class="card-footer text-right">
+                    <a href="{{ route('students.edit', $student->id) }}" class="btn btn-primary" role="button">Edit Student</a>
+                </div>
             </div>
         </div>
     </div>
