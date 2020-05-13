@@ -37328,6 +37328,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./laravel */ "./resources/js/laravel.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37372,6 +37374,78 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/laravel.js":
+/*!*********************************!*\
+  !*** ./resources/js/laravel.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// https://laraveldaily.com/crud-how-to-avoid-building-whole-form-for-delete-button/
+
+/*
+Exemples : 
+<a href="posts/2" data-method="delete" data-token="{{csrf_token()}}"> 
+- Or, request confirmation in the process -
+<a href="posts/2" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Are you sure?">
+*/
+(function () {
+  var laravel = {
+    initialize: function initialize() {
+      this.methodLinks = $('a[data-method]');
+      this.token = $('a[data-token]');
+      this.registerEvents();
+    },
+    registerEvents: function registerEvents() {
+      this.methodLinks.on('click', this.handleMethod);
+    },
+    handleMethod: function handleMethod(e) {
+      var link = $(this);
+      var httpMethod = link.data('method').toUpperCase();
+      var form; // If the data-method attribute is not PUT or DELETE,
+      // then we don't know what to do. Just ignore.
+
+      if ($.inArray(httpMethod, ['PUT', 'DELETE']) === -1) {
+        return;
+      } // Allow user to optionally provide data-confirm="Are you sure?"
+
+
+      if (link.data('confirm')) {
+        if (!laravel.verifyConfirm(link)) {
+          return false;
+        }
+      }
+
+      form = laravel.createForm(link);
+      form.submit();
+      e.preventDefault();
+    },
+    verifyConfirm: function verifyConfirm(link) {
+      return confirm(link.data('confirm'));
+    },
+    createForm: function createForm(link) {
+      var form = $('<form>', {
+        'method': 'POST',
+        'action': link.attr('href')
+      });
+      var token = $('<input>', {
+        'type': 'hidden',
+        'name': '_token',
+        'value': link.data('token')
+      });
+      var hiddenInput = $('<input>', {
+        'name': '_method',
+        'type': 'hidden',
+        'value': link.data('method')
+      });
+      return form.append(token, hiddenInput).appendTo('body');
+    }
+  };
+  laravel.initialize();
+})();
 
 /***/ }),
 
