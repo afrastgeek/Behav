@@ -18,7 +18,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="card-footer text-right">
+                <div class="card-footer d-flex align-items-center justify-content-between">
                     <a
                         tabindex="-1"
                         href="{{ route('students.destroy', $student->id) }}"
