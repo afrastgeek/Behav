@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Create Student')
+
 @section('content')
 <div class="col">
     <h1 class="mb-4">

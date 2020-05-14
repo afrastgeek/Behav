@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', "Student: $student->name")
+
 @section('content')
 <div class="col">
     <h1 class="mb-4">
