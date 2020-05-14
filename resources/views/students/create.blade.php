@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="col">
-    <h1 class="mb-4">Students</h1>
+    <h1 class="mb-4">
+        <span class="text-primary"><a href="{{ route('students.index') }}">Students</a> /</span>
+        Create
+    </h1>
 
     @include('shared.errors')
 
