@@ -24,7 +24,7 @@
                     </div>
             </div>
             <div class="card-footer text-right">
-                <input type="submit" class="btn btn-primary" role="button">
+                <input type="submit" class="btn btn-primary" value="Edit Student" role="button">
             </div>
         </form>
     </div>
