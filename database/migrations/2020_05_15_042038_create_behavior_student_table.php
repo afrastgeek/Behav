@@ -15,7 +15,12 @@ class CreateBehaviorStudentTable extends Migration
     {
         Schema::create('behavior_student', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('behavior_id');
+            $table->unsignedBigInteger('student_id');
             $table->timestamps();
+
+            $table->foreign('behavior_id')->references('id')->on('behaviors');
+            $table->foreign('student_id')->references('id')->on('students');
         });
     }
 
