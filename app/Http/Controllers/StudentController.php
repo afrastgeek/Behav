@@ -37,6 +37,11 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'student_id_number' => 'required|digits_between:1,255',
+            'name' => 'required|string|max:255',
+        ]);
+
         Student::create($request->all());
 
         return redirect('students');
