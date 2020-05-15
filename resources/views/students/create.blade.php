@@ -17,11 +17,11 @@
             <div class="card-body">
                     <div class="form-group">
                         <label for="inputStudentIdNumber">Student ID Number</label>
-                        <input type="number" class="form-control" id="inputStudentIdNumber" name="student_id_number" required>
+                        <input type="number" class="form-control" id="inputStudentIdNumber" name="student_id_number" value="{{ old('student_id_number') }}" required>
                     </div>
                     <div class="form-group">
                         <label for="inputName">Name</label>
-                        <input type="text" class="form-control" id="inputName" name="name" required>
+                        <input type="text" class="form-control" id="inputName" name="name" value="{{ old('name') }}" required>
                     </div>
             </div>
             <div class="card-footer text-right">

@@ -18,11 +18,11 @@
             <div class="card-body">
                     <div class="form-group">
                         <label for="inputActivity">Activity</label>
-                        <input type="text" class="form-control" id="inputActivity" name="activity" value="{{ $behavior->activity }}" required>
+                        <input type="text" class="form-control" id="inputActivity" name="activity" value="{{ old('activity') ?? $behavior->activity }}" required>
                     </div>
                     <div class="form-group">
                         <label for="inputPoint">Point</label>
-                        <input type="number" class="form-control" id="inputPoint" name="point" value="{{ $behavior->point }}" required>
+                        <input type="number" class="form-control" id="inputPoint" name="point" value="{{ old('point') ?? $behavior->point }}" required>
                     </div>
             </div>
             <div class="card-footer text-right">
