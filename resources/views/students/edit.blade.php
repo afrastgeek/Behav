@@ -25,7 +25,8 @@
                         <input type="text" class="form-control" id="inputName" name="name" value="{{ old('name') ?? $student->name }}" required>
                     </div>
             </div>
-            <div class="card-footer text-right">
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a href="{{ route('students.edit', $student->id) }}" class="text-danger mr-3">Reset</a>
                 <input type="submit" class="btn btn-primary" value="Edit Student" role="button">
             </div>
         </form>

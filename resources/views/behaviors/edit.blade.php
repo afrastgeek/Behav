@@ -25,7 +25,8 @@
                         <input type="number" class="form-control" id="inputPoint" name="point" value="{{ old('point') ?? $behavior->point }}" required>
                     </div>
             </div>
-            <div class="card-footer text-right">
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a href="{{ route('behaviors.edit', $behavior->id) }}" class="text-danger mr-3">Reset</a>
                 <input type="submit" class="btn btn-primary" value="Edit Behavior" role="button">
             </div>
         </form>
