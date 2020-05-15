@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use App\Activity;
 use App\Behavior;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,18 @@ class ActivityController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $activities = Activity::paginate(10);
+
+        return view('activities.index', compact('activities'));
     }
 
     /**

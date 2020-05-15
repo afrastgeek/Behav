@@ -86,6 +86,9 @@
                                     <a class="nav-link" href="{{ route('home') }}"><i class="fas fa-home"></i> Home</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('activities.index') }}"><i class="fas fa-clipboard-list"></i> Activity</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('students.index') }}"><i class="fas fa-users"></i> Student</a>
                                 </li>
                                 <li class="nav-item">

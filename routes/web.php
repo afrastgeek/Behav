@@ -25,4 +25,4 @@ Route::resource('students', 'StudentController');
 
 Route::resource('behaviors', 'BehaviorController');
 
-Route::resource('activities', 'ActivityController')->only('create', 'store');
+Route::resource('activities', 'ActivityController')->only('index', 'create', 'store');
