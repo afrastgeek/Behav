@@ -58,7 +58,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $behavior->activity }}</td>
                             <td scope="row">{{ $behavior->point }}</td>
-                            <td>{{ $behavior->created_at }}</td>
+                            <td>{{ $behavior->pivot->commited_at }}</td>
                         </tr>
                     @empty
                         <tr>
