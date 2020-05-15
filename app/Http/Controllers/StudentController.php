@@ -78,6 +78,11 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
+        $request->validate([
+            'student_id_number' => 'required|digits_between:1,255',
+            'name' => 'required|string|max:255',
+        ]);
+
         $student->fill($request->all())->save();
 
         return redirect('students');
