@@ -38,8 +38,8 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        $students = Student::all();
-        $behaviors = Behavior::all();
+        $students = Student::orderBy('name')->get();
+        $behaviors = Behavior::orderBy('activity')->get();
 
         return view('activities.create', compact('students', 'behaviors'));
     }
