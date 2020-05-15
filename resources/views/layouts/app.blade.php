@@ -82,7 +82,7 @@
                                     <a class="nav-link btn btn-primary btn-sm" href="{{ route('activities.create') }}">Track Activity</a>
                                 </li>
                                 <li class="nav-item">
-                                    <h6 class="text-muted">Menu</h6>
+                                    <a class="nav-link" href="{{ route('home') }}"><i class="fas fa-home"></i> Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('students.index') }}"><i class="fas fa-users"></i> Student</a>
