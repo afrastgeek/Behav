@@ -18,6 +18,6 @@ class Behavior extends Model
      */
     public function students()
     {
-        return $this->belongsToMany('App\Student')->withTimestamps();
+        return $this->belongsToMany('App\Student')->withPivot('commited_at')->withTimestamps();
     }
 }
