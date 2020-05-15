@@ -78,6 +78,9 @@
                     <div class="row">
                         <div class="col-md-2">
                             <ul class="nav flex-column">
+                                <li class="nav-item mb-3">
+                                    <a class="nav-link btn btn-primary btn-sm" href="{{ route('activities.create') }}">Track Activity</a>
+                                </li>
                                 <li class="nav-item">
                                     <h6 class="text-muted">Menu</h6>
                                 </li>

@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('students', 'StudentController');
 
 Route::resource('behaviors', 'BehaviorController');
+
+Route::resource('activities', 'ActivityController')->only('create', 'store');
