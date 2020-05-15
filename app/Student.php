@@ -12,4 +12,12 @@ class Student extends Model
      * @var array
      */
     protected $fillable = ['student_id_number', 'name'];
+
+    /**
+     * The behaviors that have commited by the student.
+     */
+    public function behaviors()
+    {
+        return $this->belongsToMany('App\Behavior');
+    }
 }

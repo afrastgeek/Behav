@@ -12,4 +12,12 @@ class Behavior extends Model
      * @var array
      */
     protected $fillable = ['activity', 'point'];
+
+    /**
+     * The students that have commited the behavior.
+     */
+    public function students()
+    {
+        return $this->belongsToMany('App\Student');
+    }
 }
