@@ -17,6 +17,7 @@ class CreateBehaviorStudentTable extends Migration
             $table->id();
             $table->unsignedBigInteger('behavior_id');
             $table->unsignedBigInteger('student_id');
+            $table->date('commited_at');
             $table->timestamps();
 
             $table->foreign('behavior_id')->references('id')->on('behaviors');

@@ -22,7 +22,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $activity->student->name }}</td>
                             <td scope="row">{{ $activity->behavior->activity }}</td>
-                            <td>{{ $activity->created_at }}</td>
+                            <td>{{ $activity->commited_at }}</td>
                         </tr>
                     @empty
                         <tr>

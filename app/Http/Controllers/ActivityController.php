@@ -55,13 +55,16 @@ class ActivityController extends Controller
         $request->validate([
             'behavior_id' => 'required|integer|exists:App\Behavior,id',
             'student_id' => 'required|integer|exists:App\Student,id',
+            'commited_at' => 'required|date',
         ]);
 
         $behavior = Behavior::find($request->behavior_id);
         $student = Student::find($request->student_id);
 
         // Store commited behavior in pivot table
-        $student->behaviors()->attach($request->behavior_id);
+        $student->behaviors()->attach([
+            $request->behavior_id => ['commited_at' => $request->commited_at]
+        ]);
 
         // Calculate student points
         $student->points += $behavior->point;

@@ -33,6 +33,10 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="inputCommitedAt">Commited At</label>
+                        <input type="date" class="form-control" id="inputCommitedAt" name="commited_at" value="{{ old('commited_at') }}" required>
+                    </div>
                 </div>
                 <div class="card-footer text-right">
                     <input type="submit" class="btn btn-primary" value="Create Behavior" role="button">
