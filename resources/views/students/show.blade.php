@@ -19,6 +19,10 @@
                     <th>Name</th>
                     <td scope="col">{{ $student->name }}</td>
                 </tr>
+                <tr>
+                    <th>Points</th>
+                    <td scope="col">{{ $student->points }}</td>
+                </tr>
             </table>
         </div>
         <div class="card-footer d-flex align-items-center justify-content-between">
