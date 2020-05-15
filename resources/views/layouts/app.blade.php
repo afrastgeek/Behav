@@ -84,6 +84,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('students.index') }}"><i class="fas fa-users"></i> Student</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('behaviors.index') }}"><i class="fas fa-user-shield"></i> Behavior</a>
+                                </li>
                             </ul>
                         </div>
                         @yield('content')
