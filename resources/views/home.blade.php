@@ -1,19 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="col-md-8">
-    <div class="card">
-        <div class="card-header">Dashboard</div>
-
+<div class="col">
+    <div class="card border-0 shadow-sm">
+        <div class="card-header">Activity</div>
         <div class="card-body">
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-
-            You are logged in!
+            <canvas id="activityChart"></canvas>
         </div>
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    window.addEventListener('load', function() {
+        new Chart('activityChart', {
+            type: 'line',
+            data: {
+                labels: {!! json_encode($activities->keys()->toArray()) !!},
+                datasets: [{
+                    label: 'Activity',
+                    data: {{ json_encode($activities->values()->toArray()) }},
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+            }
+        });
+    });
+</script>
+@endpush
