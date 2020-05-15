@@ -95,7 +95,7 @@ class StudentController extends Controller
 
         $student->fill($request->all())->save();
 
-        return redirect('students');
+        return redirect()->route('students.show', $student->id);
     }
 
     /**

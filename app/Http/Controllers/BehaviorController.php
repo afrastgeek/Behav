@@ -95,7 +95,7 @@ class BehaviorController extends Controller
 
         $behavior->fill($request->all())->save();
 
-        return redirect('behaviors');
+        return redirect()->route('behaviors.show', $behavior->id);
     }
 
     /**
