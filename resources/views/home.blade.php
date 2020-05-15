@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="col">
-    <div class="card border-0 shadow-sm">
-        <div class="card-header">Activity</div>
-        <div class="card-body">
-            <canvas id="activityChart"></canvas>
+<div class="row">
+    <div class="col">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header">Activity</div>
+            <div class="card-body">
+                <canvas id="activityChart"></canvas>
+            </div>
         </div>
     </div>
 </div>

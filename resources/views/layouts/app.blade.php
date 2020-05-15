@@ -96,7 +96,11 @@
                                 </li>
                             </ul>
                         </div>
-                        @yield('content')
+                        <div class="col">
+                            <div class="container-fluid">
+                                @yield('content')
+                            </div>
+                        </div>
                     </div>
                 </div>
             @else
