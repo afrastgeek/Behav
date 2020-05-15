@@ -83,16 +83,16 @@
                                     <a class="nav-link btn btn-primary btn-sm" href="{{ route('activities.create') }}">Track Activity</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('home') }}"><i class="fas fa-home"></i> Home</a>
+                                    <a class="nav-link" href="{{ route('home') }}"><i class="fas fa-home fa-fw"></i> Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('activities.index') }}"><i class="fas fa-clipboard-list"></i> Activity</a>
+                                    <a class="nav-link" href="{{ route('activities.index') }}"><i class="fas fa-clipboard-list fa-fw"></i> Activity</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('students.index') }}"><i class="fas fa-users"></i> Student</a>
+                                    <a class="nav-link" href="{{ route('students.index') }}"><i class="fas fa-users fa-fw"></i> Student</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('behaviors.index') }}"><i class="fas fa-user-shield"></i> Behavior</a>
+                                    <a class="nav-link" href="{{ route('behaviors.index') }}"><i class="fas fa-user-shield fa-fw"></i> Behavior</a>
                                 </li>
                             </ul>
                         </div>
